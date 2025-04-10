@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Details</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- FontAwesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="CSS/recipe.css">
+</head>
+<body>
+  <header>
+    <h1>Recipe Details</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="subscription.html">Subscribe</a></li>
+      </ul>
+    </nav>
+    <div id="user-menu"></div>
+    <div id="search-container">
+      <label for="recipe-search" class="visually-hidden">Search for a recipe</label>
+      <input type="text" id="recipe-search" placeholder="Search a recipe" autocomplete="on" aria-label="Search a recipe"/>
+      <button id="search-btn" aria-label="Search recipes">Search</button>
+      <!-- Conteneur pour le spinner et les suggestions -->
+      <div id="search-feedback" style="position: relative;" aria-live="polite">
+        <div id="spinner" style="display: none;" role="status" aria-hidden="true">Loading...</div>
+        <div id="suggestions" role="listbox"></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="recipe-container" aria-label="Recipe details">
+    <!-- Les détails de la recette seront chargés ici dynamiquement -->
+  </main>
+
+  <!-- Section pour les avis -->
+  <section id="reviews-section" aria-label="User reviews">
+    <h3>Reviews</h3>
+    <div id="review-stats" aria-live="polite">
+      <!-- La note moyenne et le nombre d'avis seront affichés ici -->
+    </div>
+    <div id="review-filters">
+      <label for="sort">Sort by:</label>
+      <select id="sort">
+        <option value="desc">Most Recent</option>
+        <option value="asc">Oldest</option>
+        <option value="rating_desc">Highest Rating</option>
+        <option value="rating_asc">Lowest Rating</option>
+      </select>
+      <label for="minRating">Min Rating:</label>
+      <select id="minRating">
+        <option value="0">All Ratings</option>
+        <option value="3">3 Stars & Up</option>
+        <option value="4">4 Stars & Up</option>
+        <option value="5">5 Stars Only</option>
+      </select>
+      <button id="filter-button" onclick="fetchReviews()" aria-label="Apply filters">Apply</button>
+    </div>
+    <div id="reviews-list" role="list">
+      <!-- Les avis seront insérés ici -->
+    </div>
+    <!-- Bouton load more pour charger plus d'avis -->
+    <button id="loadMoreBtn" style="display:none;" aria-label="Load more reviews">Load More</button>
+    <!-- Formulaire pour poster un avis (affiché uniquement si l'utilisateur est connecté) -->
+    <div id="review-form-container">
+      <h4>Leave a Review</h4>
+      <form id="review-form" aria-label="Leave a review form">
+        <!-- Système d'étoiles pour la note -->
+        <div id="star-rating" role="radiogroup" aria-label="Star rating">
+          <i class="fa-regular fa-star" data-value="1" tabindex="0" role="radio" aria-checked="false"></i>
+          <i class="fa-regular fa-star" data-value="2" tabindex="0" role="radio" aria-checked="false"></i>
+          <i class="fa-regular fa-star" data-value="3" tabindex="0" role="radio" aria-checked="false"></i>
+          <i class="fa-regular fa-star" data-value="4" tabindex="0" role="radio" aria-checked="false"></i>
+          <i class="fa-regular fa-star" data-value="5" tabindex="0" role="radio" aria-checked="false"></i>
+        </div>
+        <!-- Champ caché pour stocker la note sélectionnée -->
+        <input type="hidden" id="rating" name="rating" required>
+        
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" placeholder="Enter your review here..." aria-label="Your review" required></textarea>
+        <button type="submit" aria-label="Submit review">Submit Review</button>
+      </form>
+      <div id="message" role="alert"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 The Recipe Room. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="js/recipe.js"></script>
+  <script type="module" src="js/header.js"></script>
+  <script type="module" src="js/search.js"></script>
+  <script type="module" src="js/recipeInline.js"></script>
+</body>
+</html>

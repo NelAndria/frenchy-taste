@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes - The Recipe Room</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/recipes.css">
+</head>
+<body>
+  <header>
+    <h1>The Recipe Room</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html" aria-current="page">Recipes</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="subscription.html">Subscribe</a></li>
+      </ul>
+    </nav>
+    <div id="user-menu"></div>
+    <div id="search-container">
+      <label for="recipe-search" class="visually-hidden">Search for a recipe</label>
+      <input type="text" id="recipe-search" placeholder="Search a recipe" autocomplete="on" aria-label="Search a recipe" />
+      <button id="search-btn" aria-label="Search recipes">Search</button>
+      <!-- Conteneur pour le spinner et les suggestions -->
+      <div id="search-feedback" style="position: relative;" aria-live="polite">
+        <div id="spinner" style="display: none;" role="status" aria-hidden="true">Loading...</div>
+        <div id="suggestions" role="listbox"></div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="filter-container" aria-label="Recipe filters">
+    <button class="filter-btn" data-category="all" aria-label="Show all recipes">All</button>
+    <button class="filter-btn" data-category="Starter" aria-label="Show starters recipes">Starters</button>
+    <button class="filter-btn" data-category="Main" aria-label="Show main courses recipes">Main Courses</button>
+    <button class="filter-btn" data-category="Dessert" aria-label="Show desserts recipes">Desserts</button>
+  </div>
+  
+  <main>
+    <section class="recipes-container" aria-label="Recipes list">
+      <!-- Les cartes de recettes seront générées ici -->
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 The Recipe Room. All rights reserved.</p>
+  </footer>
+  
+  <script type="module" src="js/header.js"></script>
+  <script type="module" src="js/search.js"></script>
+  <script type="module" src="js/recipes.js"></script>
+</body>
+</html>

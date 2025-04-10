@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - The Recipe Room</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/blog.css">
+</head>
+<body>
+  <header>
+    <h1>The Recipe Room Blog</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="blog.html" aria-current="page">Blog</a></li>
+        <li><a href="subscription.html">Subscribe</a></li>
+      </ul>
+    </nav>
+    <div id="user-menu"></div>
+    <div id="search-container">
+      <label for="recipe-search" class="visually-hidden">Search for a recipe</label>
+      <input type="text" id="recipe-search" placeholder="Search a recipe" autocomplete="on" aria-label="Search a recipe"/>
+      <button id="search-btn" aria-label="Search recipes">Search</button>
+      <!-- Conteneur pour le spinner et les suggestions -->
+      <div id="search-feedback" style="position: relative;" aria-live="polite">
+        <div id="spinner" style="display: none;" role="status" aria-hidden="true">Loading...</div>
+        <div id="suggestions" role="listbox"></div>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <section id="blog-posts" aria-label="Blog articles">
+      <!-- Les articles du blog seront chargés ici dynamiquement -->
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 The Recipe Room. All rights reserved.</p>
+  </footer>
+
+  <script type = "module" src="js/blog.js"></script>
+  <script type = "module" src = "js/header.js"></script>
+  <script type = "module" src = "js/search.js"></script>
+</body>
+</html>

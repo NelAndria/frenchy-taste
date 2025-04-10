@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <title>Login - The Recipe Room</title>
+        <link rel = "stylesheet" href = "CSS/style.css">
+        <link rel="stylesheet" href="CSS/login.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>The Recipe Room</h1>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href ="index.html">Home</a></li>
+                    <li><a href ="recipes.html">Recipes</a></li>
+                    <li><a href ="blog.html">Blog</a></li>
+                    <li><a href ="subscription.html">Subscription</a></li>
+                    <li><a href ="login.html" aria-current="page">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class = "login-container">
+            <h2>Login</h2>
+            <div id = "error" role="alert"></div>
+            <form id = "login-form">
+                <label for="email">Email address:</label>
+                <input type = "email" id = "email" placeholder = "Email" aria-label="Email address" required>
+
+                <label for="password">Password:</label>
+                <input type = "password" id = "password" placeholder = "Password" aria-label="Password" required>
+                
+                <button type = "submit" aria-label="Submit login form">Login</button>
+            </form>
+        </div>
+
+
+       <script type = "module" src="js/login.js"></script>
+    </body>
+</html>

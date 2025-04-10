@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register - The Recipe Room</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/subscription.css">
+</head>
+<body>
+  <header>
+    <h1>The Recipe Room</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="subscription.html" aria-current="page">Subscription</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="register-container" id="register-container">
+    <h2>Register</h2>
+    <div id="error" role="alert"></div>
+    <form id="register-form" aria-label="User Registration Form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Username" aria-label="Username" required>
+      
+      <label for="email">Email address:</label>
+      <input type="email" id="email" placeholder="Email" aria-label="Email address" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Password" aria-label="Password" required>
+      
+      <label for="phone">Phone Number (optional):</label>
+      <input type="text" id="phone" placeholder="Phone Number (optional)" aria-label="Phone Number">
+      
+      <button type="submit" aria-label="Register">Register</button>
+    </form>
+  </div>
+
+  <script type="module" src="js/subscription.js"></script>
+</body>
+</html>

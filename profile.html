@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - The Recipe Room</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/profile.css">
+</head>
+<body>
+  <header>
+    <h1>The Recipe Room</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="subscription.html">Subscription</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="profile-container" id="profile-container">
+      <h2>My Profile</h2>
+      <!-- Le formulaire sera pré-rempli avec les données du profil utilisateur -->
+      <form id="profile-form" aria-label="User Profile Form">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" placeholder="Username" required>
+        
+        <label for="email">Email address:</label>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="text" name="phone" id="phone" placeholder="Phone Number">
+        
+        <label for="bio">Your Bio:</label>
+        <textarea name="bio" id="bio" placeholder="Your Bio"></textarea>
+        
+        <button type="submit" aria-label="Update Profile">Update Profile</button>
+      </form>
+      <div class="message" id="message" role="alert"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 The Recipe Room. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="js/profile.js"></script>
+</body>
+</html>

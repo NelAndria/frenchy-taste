@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Recipe Room</title>
+    <link rel = "stylesheet" href = "CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1>The Recipe Room</h1>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href = "index.html" aria-current="page">Home</a></li>
+                <li><a href = "recipes.html">Recipes</a></li>
+                <li><a href = "blog.html">Blog</a></li>
+                <li><a href = "subscription.html">Suscribe</a></li>
+            </ul>
+        </nav>
+        <div id="user-menu"></div>
+    <div id="search-container">
+      <label for="recipe-search" class="visually-hidden">Search for a recipe</label>
+      <input type="text" id="recipe-search" placeholder="Search a recipe" autocomplete="on" aria-label="Search a recipe" />
+      <button id="search-btn" aria-label="Search recipes">Search</button>
+      <!-- Conteneur pour le spinner et les suggestions -->
+      <div id="search-feedback" style="position: relative;" aria-live="polite">
+        <div id="spinner" style="display: none;" role="status" aria-hidden="true">Loading...</div>
+        <div id="suggestions" role="listbox"></div>
+      </div>
+    </div>
+    </header>
+
+
+    <section class = "hero">
+        <h2>Discover Authentic French Cuisine</h2>
+        <p>Explore the best recipes from France's top chefs</p>
+    </section>
+
+    <section class = "featured-recipes" aria-label="Featured recipes">
+        <h2>Featured Recipes</h2>
+
+
+    </section>
+
+    <section class = "latest-articles" aria-label="Latest blog articles">
+        <h2>Latest from the Blog</h2>
+        <div class = "blog-container">
+        <div class = "blog-card">
+            <img src = "http://localhost:5000/public/images/french-gastronomy-history.png" alt=" french gastronomy history">
+            <div class = "blog-content">
+                <h3 class = "blog-title">The History of French Gastronomy</h3>        
+                <p class = "blog-excerpt">Discover the rich history of French cuisine, from medieval feasts to Michelin stars...</p>
+                <a href = "#" class = "blog-readmore" aria-label="Read more about the history of French gastronomy">Read More</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="http://localhost:5000/public/images/french-kitchen.png" alt="Culinary Terms">
+            <div class="blog-content">
+                <h3 class="blog-title">A Glossary of French Culinary Terms</h3>
+                <p class="blog-excerpt">Master the language of French chefs with this comprehensive guide to culinary terms...</p>
+                <a href="#" class="blog-readmore" aria-label="Read more about French culinary terms">Read More</a>
+            </div>
+        </div>
+    
+
+    
+    <div class="blog-card">
+        <img src="http://localhost:5000/public/images/season-fruits-and-vegetables.png" alt="season's fruits and vegetables">
+        <div class="blog-content">
+            <h3 class="blog-title">Fruits and Vegetables by Season</h3>
+            <p class="blog-excerpt">Explore which fruits and vegetables are in season for each part of the year to create fresh and flavorful dishes.</p>
+            <a href="#" class="blog-readmore" aria-label="Read more about seasonal fruits and vegetables">Read More</a>
+        </div>
+    </div>
+</div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 The Recipe Room. All rights reserved.</p>
+    </footer>
+
+    <script  type = "module" src = "js/header.js"></script>
+    <script type = "module" src = "js/search.js"></script>
+    <script type = "module" src="js/index.js"></script>
+     
+</body>
+</html>

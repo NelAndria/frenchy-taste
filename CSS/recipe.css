@@ -1,0 +1,191 @@
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.recipe-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #b22222;
+}
+
+img {
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.error-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffe6e6;
+    border: 1px solid #ff4d4d;
+    border-radius: 10px;
+    color: #b22222;
+    margin: 20px;
+}
+
+.back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background-color: #a93226;
+}
+
+.recipe-details {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+
+.recipe-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.recipe-info {
+    text-align: left;
+}
+
+.ingredient-list {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.instruction-list {
+    list-style: decimal;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #fff8f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+.instruction-list li {
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+/*section avis*/
+.review {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#reviews-section {
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#reviews-section h3 {
+    text-align: center;
+    color: #b22222;
+    margin-bottom: 15px;
+}
+
+#reviews-list .review {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+#reviews-list .review:last-child {
+    border-bottom: none;
+}
+
+#review-form-container {
+    margin-top: 20px;
+}
+
+#review-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+#review-form-container label {
+    margin-top: 10px;
+}
+
+#review-form-container input,
+#review-form-container textarea {
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+#review-form-container button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#review-form-container button:hover {
+    background-color: #a93226;
+}
+
+/*systeme d'etoiles*/
+#star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+#star-rating i {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+#star-rating i.active {
+    color: gold;
+}
+
+/*message de confirmation*/
+#message {
+    display: none;
+    text-align:center;
+    margin-top: 10px;
+    color: green;
+
+}

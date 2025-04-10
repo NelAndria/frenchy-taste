@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Change Email - The Recipe Room</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/settings.css">
+</head>
+<body>
+  <header>
+    <h1>The Recipe Room</h1>
+    <!-- Tu peux inclure ici ton header commun via un include ou en dupliquant le code -->
+  </header>
+
+  <main>
+    <section class="settings-section">
+      <h2>Change Your Email Address</h2>
+      <form id="change-email-form">
+        <label for="new-email">New Email:</label>
+        <input type="email" id="new-email" name="newEmail" required>
+
+        <label for="confirm-email">Confirm New Email:</label>
+        <input type="email" id="confirm-email" name="confirmEmail" required>
+
+        <button type="submit">Update Email</button>
+      </form>
+      <div id="email-message" role="alert"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 The Recipe Room. All rights reserved.</p>
+  </footer>
+
+  <!-- Inclusion du script JS externe -->
+  <script type="module" src="js/settings-email.js"></script>
+</body>
+</html>

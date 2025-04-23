@@ -7,32 +7,52 @@
     <link rel = "stylesheet" href = "CSS/style.css">
 </head>
 <body>
-    <header>
-        <h1>The Recipe Room</h1>
+    <header class="site-header">
+      <!-- Première rangée : logo / recherche / user-menu -->
+ 
 
+            <!-- Séparateur visuel -->
+ <!-- <div class="header-separator"></div> -->
+
+  <div class="header-logo">
+    <a href="index.html">
+      <img src="http://localhost:5000/public/images/logo.png" alt="The Recipe Room Logo" class="logo">
+    </a>
+  </div>
+
+  <div class="header-row header-row--bottom">      
         <nav aria-label="Main navigation">
-            <ul>
-                <li><a href = "index.html" aria-current="page">Home</a></li>
+            <ul class="main-nav">
+                <li><a href ="index.html">Home</a></li>
                 <li><a href = "recipes.html">Recipes</a></li>
                 <li><a href = "blog.html">Blog</a></li>
-                <li><a href = "subscription.html">Suscribe</a></li>
+                <li><a href = "subscription.html">Subscribe</a></li>
+                <li><a href = "about.html">About Us</a></li>
+                <li><a href = "contact.html">Contact</a></li>
             </ul>
         </nav>
+    </div>
+    <div class="header-row header-row--top">
+        <!-- Zone gauche pour le logo -->
+       
+
         <div id="user-menu"></div>
-    <div id="search-container">
-      <label for="recipe-search" class="visually-hidden">Search for a recipe</label>
-      <input type="text" id="recipe-search" placeholder="Search a recipe" autocomplete="on" aria-label="Search a recipe" />
-      <button id="search-btn" aria-label="Search recipes">Search</button>
-      <!-- Conteneur pour le spinner et les suggestions -->
-      <div id="search-feedback" style="position: relative;" aria-live="polite">
-        <div id="spinner" style="display: none;" role="status" aria-hidden="true">Loading...</div>
-        <div id="suggestions" role="listbox"></div>
-      </div>
+        <div id="search-container">
+          <label for="recipe-search" class="visually-hidden">Search for a recipe</label>
+          <input type="text" id="recipe-search" placeholder="Search a recipe" autocomplete="on" aria-label="Search a recipe" />
+          <button id="search-btn" aria-label="Search recipes">Search</button>
+          <!-- Conteneur pour le spinner et les suggestions -->
+          <div id="search-feedback" style="position: relative;" aria-live="polite">
+            <div id="spinner" style="display: none;" role="status" aria-hidden="true">Loading...</div>
+            <div id="suggestions" role="listbox"></div>
+          </div>
+        </div>
     </div>
     </header>
 
 
     <section class = "hero">
+        <img src="http://localhost:5000/public/images/logo.png" alt="The Recipe Room Logo" class="hero-logo">
         <h2>Discover Authentic French Cuisine</h2>
         <p>Explore the best recipes from France's top chefs</p>
     </section>
@@ -51,7 +71,7 @@
             <div class = "blog-content">
                 <h3 class = "blog-title">The History of French Gastronomy</h3>        
                 <p class = "blog-excerpt">Discover the rich history of French cuisine, from medieval feasts to Michelin stars...</p>
-                <a href = "#" class = "blog-readmore" aria-label="Read more about the history of French gastronomy">Read More</a>
+                <a href = "blogPost.html?id=67c91b9032e10833f88bf5b6" class = "blog-readmore" aria-label="Read more about the history of French gastronomy">Read More</a>
             </div>
         </div>
 
@@ -60,7 +80,7 @@
             <div class="blog-content">
                 <h3 class="blog-title">A Glossary of French Culinary Terms</h3>
                 <p class="blog-excerpt">Master the language of French chefs with this comprehensive guide to culinary terms...</p>
-                <a href="#" class="blog-readmore" aria-label="Read more about French culinary terms">Read More</a>
+                <a href="glossary.html" class="blog-readmore" aria-label="Read more about French culinary terms">Read More</a>
             </div>
         </div>
     

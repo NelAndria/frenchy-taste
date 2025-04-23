@@ -15,12 +15,14 @@ if (token) {
   const userMenu = document.getElementById("user-menu");
 
   userMenu.innerHTML = `
-    <button id="user-button" aria-haspopup="true" aria-expanded="false" aria-label="User menu">${initials}</button>
+   <button id="user-button" aria-haspopup="true" aria-expanded="false" aria-label="User menu">${initials}</button>
     <div id="user-dropdown" role="menu" aria-labelledby="user-button">
       <a href="profile.html" role="menuitem">Profile</a>
+      
       <div class="settings-wrapper">
         <button id="settings-button" aria-haspopup="true" aria-expanded="false" aria-label="Settings submenu">Settings ▸</button>
         <div id="settings-submenu" class="submenu" role="menu">
+          <!-- Sous-menu pour Security & Login -->
           <div class="nested-menu">
             <button id="security-button" aria-haspopup="true" aria-expanded="false" aria-label="Security submenu">🔐 Security & Login ▸</button>
             <div id="security-submenu" class="nested-submenu" role="menu">
@@ -28,10 +30,16 @@ if (token) {
               <a href="settings-password.html" role="menuitem">Change Password</a>
             </div>
           </div>
-          <a href="settings-preferences.html" role="menuitem">🌎 Preferences</a>
-          <a href="settings-food.html" role="menuitem">🍽 Food Preferences</a>
-          <a href="settings-notifications.html" role="menuitem">📧 Notifications</a>
-          <a href="settings-privacy.html" role="menuitem">📝 Privacy & Account</a>
+          
+          <!-- Sous-menu pour Privacy & Account -->
+          <div class="nested-menu">
+            <button id="privacy-button" aria-haspopup="true" aria-expanded="false" aria-label="Privacy submenu">Privacy & Account ▸</button>
+            <div id="privacy-submenu" class="nested-submenu" role="menu">
+              <a href="settings-account.html" role="menuitem">Edit Account Info</a>
+              <a href="settings-delete.html" role="menuitem">Delete Account</a>
+              <a href="settings-notifications.html" role="menuitem">Notification Preferences</a>
+            </div>
+          </div>
         </div>
       </div>
       <a href="#" id="logout" role="menuitem">Logout</a>
@@ -68,6 +76,16 @@ if (token) {
     const isExpanded = securityButton.getAttribute("aria-expanded") === "true";
     securityButton.setAttribute("aria-expanded", !isExpanded);
     securitySubmenu.style.display = isExpanded ? "none" : "block";
+  });
+
+  // Gestion du sous-menu "Privacy & Account"
+  const privacyButton = document.getElementById("privacy-button");
+  const privacySubmenu = document.getElementById("privacy-submenu");
+  privacyButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const isExpanded = privacyButton.getAttribute("aria-expanded") === "true";
+    privacyButton.setAttribute("aria-expanded", !isExpanded);
+    privacySubmenu.style.display = isExpanded ? "none" : "block";
   });
 
   // Fermer tous les menus lorsqu'on clique en dehors

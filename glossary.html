@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glossary – The Recipe Room</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/glossary.css">
+</head>
+<body>
+  <header class="site-header">
+    <!-- Première rangée : logo / recherche / user-menu -->
+
+
+          <!-- Séparateur visuel -->
+<!-- <div class="header-separator"></div> -->
+
+<div class="header-logo">
+  <a href="index.html">
+    <img src="http://localhost:5000/public/images/logo.png" alt="The Recipe Room Logo" class="logo">
+  </a>
+</div>
+
+<div class="header-row header-row--bottom">      
+      <nav aria-label="Main navigation">
+          <ul class="main-nav">
+              <li><a href ="index.html">Home</a></li>
+              <li><a href = "recipes.html">Recipes</a></li>
+              <li><a href = "blog.html">Blog</a></li>
+              <li><a href = "subscription.html">Subscribe</a></li>
+              <li><a href = "about.html">About Us</a></li>
+              <li><a href = "contact.html">Contact</a></li>
+          </ul>
+      </nav>
+  </div>
+  <div class="header-row header-row--top">
+      <!-- Zone gauche pour le logo -->
+     
+
+      <div id="user-menu"></div>
+      <div id="search-container">
+        <label for="recipe-search" class="visually-hidden">Search for a recipe</label>
+        <input type="text" id="recipe-search" placeholder="Search a recipe" autocomplete="on" aria-label="Search a recipe" />
+        <button id="search-btn" aria-label="Search recipes">Search</button>
+        <!-- Conteneur pour le spinner et les suggestions -->
+        <div id="search-feedback" style="position: relative;" aria-live="polite">
+          <div id="spinner" style="display: none;" role="status" aria-hidden="true">Loading...</div>
+          <div id="suggestions" role="listbox"></div>
+        </div>
+      </div>
+  </div>
+  </header>
+
+  <section class="glossary-intro">
+    <h1>French Culinary Glossary</h1>
+    <p>
+      Discover our comprehensive <strong>French Culinary Glossary</strong>, your go‑to resource for mastering essential 
+      cooking techniques, classic ingredients, and professional kitchen terminology. Whether you’re a home cook, 
+      aspiring chef, or food enthusiast, simply type any term into the search box to instantly see clear definitions 
+      crafted by culinary experts. Boost your recipe repertoire, impress at dinner parties, and deepen your understanding 
+      of French gastronomy.
+    </p>
+  </section>
+  
+  <main class="glossary-container">
+    <h2 class= "title">What Does That Mean? Search the Glossary!</h2>
+
+    <input id="glossary-search" type="search" placeholder="Search term…" aria-label="Search glossary">
+    <ul id="glossary-list" class="glossary-list"></ul>
+  </main>
+  <footer>
+    <p>&copy; 2025 The Recipe Room. All rights reserved.</p>
+</footer>
+  <script type="module" src="js/glossary.js"></script>
+  <script  type = "module" src = "js/header.js"></script>
+  <script type = "module" src = "js/search.js"></script>
+</body>
+</html>

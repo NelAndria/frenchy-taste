@@ -96,23 +96,36 @@ router.post(
   }
 );
 
+
 // Endpoint pour rafraîchir le token d'accès
 router.post("/refresh", async (req, res, next) => {
   try {
-    const { refreshToken } = req.body;
-    if (!refreshToken)
+    // Récupérer le refresh token depuis le corps ou depuis les cookies
+    const refreshToken = req.body.refreshToken || req.cookies.refreshToken;
+    if (!refreshToken) {
       return res.status(400).json({ message: "Refresh token is required" });
+    }
+
     jwt.verify(refreshToken, process.env.JWT_REFRESH_SECRET, (err, decoded) => {
       if (err) {
         return res.status(401).json({ message: "Invalid refresh token" });
       }
+      // Générer un nouveau token d'accès
       const newToken = jwt.sign({ id: decoded.id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+      // Optionnel : mettre à jour le cookie du token d'accès
+      res.cookie("token", newToken, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production", // false en dev
+        sameSite: "lax",
+        maxAge: 3600000, // 1 heure
+      });
       res.status(200).json({ token: newToken });
     });
   } catch (error) {
     next(error);
   }
 });
+
 
 // Route protégée : Récupérer le profil utilisateur
 router.get("/profile", authMiddleware, async (req, res, next) => {

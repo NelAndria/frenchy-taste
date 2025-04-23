@@ -98,5 +98,46 @@ router.put(
   }
 );
 
+// Route pour supprimer définitivement son compte
+router.delete("/profile", authMiddleware, async (req, res, next) => {
+  try {
+    // Optionnel : Vérifier le mot de passe envoyé dans le corps de la requête
+    if (req.body.password) {
+      const user = await User.findById(req.user.id);
+      const isMatch = await bcrypt.compare(req.body.password, user.password);
+      if (!isMatch) {
+        return res.status(400).json({ message: "Mot de passe incorrect" });
+      }
+    }
+    await User.findByIdAndDelete(req.user.id);
+    res.json({ message: "Compte supprimé avec succès" });
+  } catch (error) {
+    next(error);
+  }
+});
+
+// Route pour mettre à jour les préférences de notification
+router.put("/notifications", authMiddleware, async (req, res, next) => {
+  try {
+    const { recipes, security, promotions } = req.body;
+    const user = await User.findById(req.user.id);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    // Sauvegarder les préférences (ajoute ces champs dans ton modèle User si nécessaire)
+    user.notifications = {
+      recipes: recipes === undefined ? user.notifications?.recipes || false : recipes,
+      security: security === undefined ? user.notifications?.security || false : security,
+      promotions: promotions === undefined ? user.notifications?.promotions || false : promotions
+    };
+    await user.save();
+    res.json({ message: "Notification preferences updated successfully" });
+  } catch (error) {
+    next(error);
+  }
+});
+
+
+
 export default router;
 

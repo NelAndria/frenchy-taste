@@ -1,0 +1,121 @@
+/* contact.css */
+
+/* Conteneur principal pour la section de contact */
+.contact-section {
+  max-width: 800px;             /* Limite la largeur pour une meilleure lisibilité */
+  margin: 40px auto;            /* Centre le conteneur horizontalement avec un espace vertical */
+  padding: 30px 20px;           /* Ajoute du padding pour aérer le contenu */
+  background-color: #ffffff;    /* Fond blanc pour le contraste */
+  border-radius: 8px;           /* Coins arrondis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre pour la profondeur */
+}
+
+/* Titre et sous-titres */
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: #a33d2d;               /* Couleur principale de ton site */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 1.125rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Formulaire de contact */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;                   /* Espacement vertical entre les éléments */
+}
+
+/* Labels du formulaire */
+#contact-form label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Champs de saisie et textarea */
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au focus sur les champs */
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #a33d2d;      /* Accent sur focus */
+  box-shadow: 0 0 5px rgba(163, 61, 45, 0.3);
+}
+
+/* Bouton d'envoi */
+#contact-form button {
+  align-self: flex-start;     /* Aligner le bouton à gauche */
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #a33d2d;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+  background-color: #8a2a1e;    /* Variante plus foncée au survol */
+}
+
+/* Zone d'affichage du message de confirmation ou d'erreur */
+#form-response {
+  margin-top: 20px;
+  font-size: 1.125rem;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Message de succès */
+#form-response.success {
+  background-color: #e0f9e0;
+  color: #2d662d;
+  border: 1px solid #2d662d;
+}
+
+/* Message d'erreur */
+#form-response.error {
+  background-color: #ffe6e6;
+  color: #d8000c;
+  border: 1px solid #d8000c;
+}
+
+/* Responsivité pour mobile */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 20px 15px;
+    margin: 20px auto;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-section p {
+    font-size: 1rem;
+  }
+}

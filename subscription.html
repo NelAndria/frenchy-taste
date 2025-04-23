@@ -15,10 +15,22 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="recipes.html">Recipes</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="subscription.html" aria-current="page">Subscription</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li><a href = "about.html">About Us</a></li>
+        <li><a href = "contact.html">Contact</a></li>
+        
       </ul>
     </nav>
+    <div id="user-menu"></div>
+<div id="search-container">
+<label for="recipe-search" class="visually-hidden">Search for a recipe</label>
+<input type="text" id="recipe-search" placeholder="Search a recipe" autocomplete="on" aria-label="Search a recipe" />
+<button id="search-btn" aria-label="Search recipes">Search</button>
+<!-- Conteneur pour le spinner et les suggestions -->
+<div id="search-feedback" style="position: relative;" aria-live="polite">
+  <div id="spinner" style="display: none;" role="status" aria-hidden="true">Loading...</div>
+  <div id="suggestions" role="listbox"></div>
+</div>
+</div>
   </header>
 
   <div class="register-container" id="register-container">
@@ -42,5 +54,7 @@
   </div>
 
   <script type="module" src="js/subscription.js"></script>
+  <script type="module" src="js/header.js"></script>
+  <script type="module" src="js/search.js"></script>
 </body>
 </html>

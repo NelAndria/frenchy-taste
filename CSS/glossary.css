@@ -1,0 +1,66 @@
+/* Glossary Page Styles */
+.glossary-intro {
+  max-width: 800px;
+  margin: 40px auto 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.glossary-intro h1 {
+  font-size: 2.5rem;
+  color: #a33d2d;
+  margin-bottom: 10px;
+}
+
+.glossary-intro p {
+  font-size: 1.125rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.glossary-container .title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem;
+  color: #a93226; /* bordeaux foncé */
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #c0392b; /* rouge plus clair */
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+.glossary-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  #glossary-search {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  .glossary-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .glossary-entry {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-entry h2 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: #a33d2d;
+  }
+  .glossary-entry p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  

@@ -4,7 +4,14 @@ const userSchema = new mongoose.Schema({
     username: {type: String, required: true},
     email: {type: String, required: true, unique: true},
     password: {type: String, required: true},
-    phone: {type: String}
+    phone: {type: String},
+    profilePicture: { type: String },  // nouveau champ
+    bio: { type: String },
+    notifications: {
+        recipes: { type: Boolean, default: true },
+        security: { type: Boolean, default: false },
+        promotions: { type: Boolean, default: false }
+      }
 });
 
 const User = mongoose.model("User", userSchema);

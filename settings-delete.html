@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete Account - The Recipe Room</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/settings.css"> <!-- Nouveau fichier CSS -->
+</head>
+<body>
+  <header>
+    <h1>The Recipe Room</h1>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href = "index.html" aria-current="page">Home</a></li>
+            <li><a href = "recipes.html">Recipes</a></li>
+            <li><a href = "blog.html">Blog</a></li>
+            <li><a href = "about.html">About Us</a></li>
+            <li><a href = "contact.html">Contact</a></li>
+            
+        </ul>
+    </nav>
+    <div id="user-menu"></div>
+<div id="search-container">
+  <label for="recipe-search" class="visually-hidden">Search for a recipe</label>
+  <input type="text" id="recipe-search" placeholder="Search a recipe" autocomplete="on" aria-label="Search a recipe" />
+  <button id="search-btn" aria-label="Search recipes">Search</button>
+  <!-- Conteneur pour le spinner et les suggestions -->
+  <div id="search-feedback" style="position: relative;" aria-live="polite">
+    <div id="spinner" style="display: none;" role="status" aria-hidden="true">Loading...</div>
+    <div id="suggestions" role="listbox"></div>
+  </div>
+</div>
+  </header>
+  
+  <main>
+    <section class="settings-section">
+      <h2>Delete Your Account</h2>
+      <p class="warning">Warning: This action is irreversible. Please confirm by entering your current password.</p>
+      <form id="delete-account-form">
+        <label for="confirmPassword">Current Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <button type="submit" class="delete-button">Delete Account</button>
+      </form>
+      <div id="delete-message" role="alert"></div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 The Recipe Room. All rights reserved.</p>
+  </footer>
+  
+  <script type="module" src="js/settings-delete.js"></script>
+  <script type = "module" src = "js/search.js"></script>
+  <script type = "module" src="js/header.js"></script>
+</body>
+</html>

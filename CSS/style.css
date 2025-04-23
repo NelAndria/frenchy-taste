@@ -14,6 +14,29 @@ body {
 }
 
 /* En-tête*/
+
+/* Style pour le logo cliquable */
+/* Style global du header avec flexbox */
+/*.header-container {
+    display: flex;
+    justify-content: space-between; /* Place le logo à gauche et le contenu à droite */
+   /* align-items: center;
+    max-width: 1200px; /* Optionnel : limite la largeur du contenu pour garder un design centré */
+   /* margin: 0 auto;    /* Centre le container horizontalement */
+   /* padding: 0 0px;
+  }
+  /* Zone pour le logo */
+.header-logo img{
+    width: auto;
+    height: 75px; /* Ajustez la hauteur selon vos besoins */
+}
+
+  /* Vous pouvez également personnaliser le lien du logo, par exemple enlever les bordures */
+  nav ul li a img {
+    border: none;
+    display: block;
+  }
+  
 header {
     background-color: #a33d2d;
     color: white;
@@ -25,6 +48,8 @@ header {
     width: 100%;
     z-index: 1000;
 }
+
+
 
 nav ul {
     list-style: none;
@@ -50,6 +75,55 @@ nav ul li a:hover {
     color: #ffccbc;
 }
 
+.site-header {
+    width: 100%;
+    background: #a33d2d;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Les deux rangées */
+  .header-row {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .header-row--top {
+    justify-content: space-between;
+  }
+  .header-row--bottom {
+    justify-content: center;
+  }
+
+  /* Séparateur horizontal */
+.header-separator {
+    height: 1px;
+    background: #eee;
+    margin: 0;
+  }
+  
+  /* Menu de navigation principal */
+  .main-nav {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  .main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover,
+  .main-nav a[aria-current="page"] {
+    color: #ffccbc;
+  }
+
+
 /* section hero*/
 
 .hero {
@@ -64,12 +138,27 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 400px;
+    max-height: 500px;
+}
+
+.hero-logo {
+    display: block;       /* Pour que l'image occupe toute la largeur du bloc et permette le centrage */
+    margin: 0 auto 10px;
+    max-width: 400px;      /* Ajustez la largeur maximale du logo en fonction de votre design */
+    height: auto;  
+    padding-top: 150px;        /* Conserve les proportions de l'image */
 }
 
 .hero h2 {
     font-size: 42px;
-    margin-bottom: 10px;
+    
+    
+}
+
+.hero p {
+    
+    margin-bottom: 200px;
+    
 }
 
 /* recettes en vedette*/

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags essentiels pour le SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover The Recipe Room – a passionate culinary project dedicated to sharing authentic recipes and fostering a community of food lovers. Learn more about our mission, vision, and values.">
+  <meta name="keywords" content="authentic recipes, culinary passion, food community, French cuisine, cooking, food blog">
+  <meta name="author" content="The Recipe Room">
+  <title>About Us - The Recipe Room</title>
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="About The Recipe Room">
+  <meta property="og:description" content="Discover our passion for authentic recipes and learn about our mission, vision, and values at The Recipe Room.">
+  <meta property="og:image" content="http://localhost:5000/public/images/your-about-page-image.jpg">
+  <meta property="og:url" content="http://localhost:5500/about.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About The Recipe Room">
+  <meta name="twitter:description" content="Learn about our culinary passion and the mission behind The Recipe Room – sharing authentic recipes with food lovers.">
+  <meta name="twitter:image" content="http://localhost:5000/public/images/your-about-page-image.jpg">
+
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/about.css">
+  
+  <!-- Vous pouvez ajouter ici des liens vers des polices Google si nécessaire -->
+  <!--<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">-->
+  
+  <!-- Scripts optionnels pour structured data / SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "The Recipe Room",
+    "url": "http://localhost:5500/about.html",
+    "logo": "http://localhost:5000/public/images/logo.png",
+    "sameAs": [
+      "https://facebook.com/YourPage",
+      "https://twitter.com/YourProfile",
+      "https://instagram.com/YourProfile"
+    ],
+    "description": "The Recipe Room is a passion project dedicated to sharing authentic recipes and fostering a thriving community of food lovers."
+  }
+  </script>
+  
+</head>
+<body>
+  <header>
+    <h1>The Recipe Room</h1>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href = "index.html" aria-current="page">Home</a></li>
+            <li><a href = "recipes.html">Recipes</a></li>
+            <li><a href = "blog.html">Blog</a></li>
+            <li><a href = "subscription.html">Subscribe</a></li>
+            <li><a href = "contact.html">Contact</a></li>
+            
+        </ul>
+    </nav>
+    <div id="user-menu"></div>
+<div id="search-container">
+  <label for="recipe-search" class="visually-hidden">Search for a recipe</label>
+  <input type="text" id="recipe-search" placeholder="Search a recipe" autocomplete="on" aria-label="Search a recipe" />
+  <button id="search-btn" aria-label="Search recipes">Search</button>
+  <!-- Conteneur pour le spinner et les suggestions -->
+  <div id="search-feedback" style="position: relative;" aria-live="polite">
+    <div id="spinner" style="display: none;" role="status" aria-hidden="true">Loading...</div>
+    <div id="suggestions" role="listbox"></div>
+  </div>
+</div>
+  </header>
+  
+  <main>
+    <section class="about">
+      <h2>About The Recipe Room</h2>
+      <p>Welcome to <strong>The Recipe Room</strong> – your ultimate destination for authentic and inspiring culinary experiences. Our passion for cooking and genuine appreciation for food have driven us to create a platform where food enthusiasts can explore, learn, and share the art of cooking.</p>
+      
+      <h3>Our Mission</h3>
+      <p>We strive to preserve and share the rich culinary traditions from around the world, with a special focus on authentic recipes that bring people together. Our mission is to deliver high-quality, tested recipes that inspire home cooks to experiment and elevate their cooking.</p>
+      
+      <h3>Our Vision</h3>
+      <p>At The Recipe Room, we envision a world where everyone has access to real, delicious recipes that honor time-tested traditions and celebrate cultural diversity. We believe that food is a universal language that unites communities, and we aim to be a trusted source for culinary inspiration.</p>
+      
+      <h3>Our Values</h3>
+      <ul>
+        <li><strong>Authenticity:</strong> We are committed to sharing genuine recipes that have been passed down through generations or rigorously tested by our team.</li>
+        <li><strong>Quality:</strong> Every recipe on our site is meticulously researched, ensuring accuracy in measurements, ingredients, and instructions.</li>
+        <li><strong>Community:</strong> We encourage interaction, feedback, and shared experiences among our users, fostering a vibrant food-loving community.</li>
+        <li><strong>Innovation:</strong> While we honor culinary traditions, we also embrace modern techniques and creative twists to keep our offerings fresh and inspiring.</li>
+      </ul>
+      
+      <h3>Our Story</h3>
+      <p>The Recipe Room started as a personal passion project and has grown into a hub for food enthusiasts. Our journey began with the simple idea of sharing family recipes and soon evolved into a comprehensive resource that includes a wide variety of dishes from different cultures. Whether you are looking for a classic French recipe, innovative fusion cuisine, or simply some culinary inspiration, you will find it here at The Recipe Room.</p>
+      
+      <h3>Get In Touch</h3>
+      <p>We love hearing from you! Whether you have a recipe to share, a question, or just want to say hello, feel free to <a href="contact.html">contact us</a>.</p>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 The Recipe Room. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="js/header.js"></script>
+  <script type="module" src="js/search.js"></script>
+</body>
+</html>

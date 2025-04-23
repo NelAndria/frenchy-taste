@@ -67,6 +67,13 @@ app.use("/api/test", testRoutes);
 import settingsRoutes from "./routes/settingsRoutes.js";
 app.use("/api/users/settings", settingsRoutes);
 
+import glossaryRoutes from "./routes/glossaryRoutes.js";
+app.use("/api/glossary", glossaryRoutes);
+
+import seasonalProduceRoutes from "./routes/seasonalProduceRoutes.js";
+app.use("/api/produce", seasonalProduceRoutes);
+
+
 
 app.use((err, req, res, next) => {
   console.error("❌ Erreur serveur :", err);
@@ -78,7 +85,7 @@ app.use((err, req, res, next) => {
 
 app.listen(CONFIG.PORT, () => console.log(`Server running on port ${CONFIG.PORT}`));
 
-import "./utils/cronJob.js";
+//import "./utils/cronJob.js";
 
 
 

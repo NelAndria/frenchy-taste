@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Change Email - The Recipe Room</title>
+  <title>Notification Preferences - The Recipe Room</title>
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="CSS/settings.css">
 </head>
 <body>
   <header>
     <h1>The Recipe Room</h1>
-    
     <nav aria-label="Main navigation">
       <ul>
           <li><a href = "index.html" aria-current="page">Home</a></li>
           <li><a href = "recipes.html">Recipes</a></li>
           <li><a href = "blog.html">Blog</a></li>
-          <li><a href = "subscription.html">Suscribe</a></li>
           <li><a href = "about.html">About Us</a></li>
           <li><a href = "contact.html">Contact</a></li>
+          
       </ul>
   </nav>
   <div id="user-menu"></div>
@@ -31,32 +30,40 @@
   <div id="spinner" style="display: none;" role="status" aria-hidden="true">Loading...</div>
   <div id="suggestions" role="listbox"></div>
 </div>
-</div><!-- Tu peux inclure ici ton header commun via un include ou en dupliquant le code -->
+</div>
   </header>
-
+  
   <main>
     <section class="settings-section">
-      <h2>Change Your Email Address</h2>
-      <form id="change-email-form">
-        <label for="new-email">New Email:</label>
-        <input type="email" id="new-email" name="newEmail" required>
-
-        <label for="confirm-email">Confirm New Email:</label>
-        <input type="email" id="confirm-email" name="confirmEmail" required>
-
-        <button type="submit">Update Email</button>
+      <h2>Notification Preferences</h2>
+      <form id="notifications-form">
+        
+          <legend>Email Notifications</legend>
+        <label>
+          <input type="checkbox" id="notif-recipes" name="recipes" checked>
+          New Recipes
+        </label>
+        <label>
+          <input type="checkbox" id="notif-security" name="security">
+          Security Alerts
+        </label>
+        <label>
+          <input type="checkbox" id="notif-promotions" name="promotions">
+          New Promotions and Special Offers
+        </label>
+        
+        <button type="submit">Save Preferences</button>
       </form>
-      <div id="email-message" role="alert"></div>
+      <div id="notifications-message" role="alert"></div>
     </section>
   </main>
-
+  
   <footer>
     <p>&copy; 2025 The Recipe Room. All rights reserved.</p>
   </footer>
-
-  <!-- Inclusion du script JS externe -->
-  <script type="module" src="js/settings-email.js"></script>
-  <script type="module" src="js/header.js"></script>
-  <script type="module" src="js/search.js"></script>
+  
+  <script type="module" src="js/settings-notifications.js"></script>
+  <script type = "module" src = "js/search.js"></script>
+  <script type = "module" src="js/header.js"></script>
 </body>
 </html>

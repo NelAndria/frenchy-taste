@@ -2,10 +2,10 @@
 import express from "express";
 import { body, query, param, validationResult } from "express-validator";
 import Recipe from "../models/Recipe.js";
-import generateRecipe from "../utils/generateRecipe.js";
+//import generateRecipe from "../utils/generateRecipe.js";
 import redisClient from "../config/redisClient.js";
 import authMiddleware from "../middleware/authMiddleware.js";
-import { getRandomRecipe } from "../services/spoonacularService.js";
+//import { getRandomRecipe } from "../services/spoonacularService.js";
 
 const router = express.Router();
 
@@ -91,7 +91,7 @@ router.get("/random", async (req, res, next) => {
 // ⚡ Route POST pour générer une recette via Spoonacular (protégée par auth)
 // Cette route utilise la fonction generateRecipe pour récupérer une recette externe,
 // vérifie l'existence d'un doublon et la sauvegarde dans la base de données
-router.post("/generate", authMiddleware, async (req, res, next) => {
+/*router.post("/generate", authMiddleware, async (req, res, next) => {
   try {
     // Générer la recette via l'API externe
     const newRecipeData = await generateRecipe();
@@ -118,7 +118,7 @@ router.post("/generate", authMiddleware, async (req, res, next) => {
     console.error("Error generating and saving recipe:", error);
     next(error);
   }
-});
+});*/
 
 // 📜 Récupérer toutes les recettes
 router.get("/", async (req, res, next) => {

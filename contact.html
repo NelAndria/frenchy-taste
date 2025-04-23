@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport pour une bonne responsivité -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Titre optimisé SEO -->
+  <title>Contact Us - The Recipe Room</title>
+  <!-- Meta description optimisée pour le SEO -->
+  <meta name="description" content="Get in touch with The Recipe Room. Contact us for inquiries, recipes suggestions, or any questions about our culinary projects.">
+  <!-- (Optionnel) Balise keywords -->
+  <meta name="keywords" content="Contact, The Recipe Room, Culinary, Recipes, Food, Inquiries, Support">
+  <!-- Canonical link pour éviter le contenu dupliqué -->
+  <link rel="canonical" href="https://www.thereciperoom.com/contact.html">
+  <!-- Fichier CSS principal, vous pouvez ajouter un contact.css si besoin -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- Fichier CSS spécifique pour la page contact (à créer et adapter si besoin) -->
+  <link rel="stylesheet" href="CSS/contact.css">
+  
+</head>
+<body>
+  <header>
+    <h1>The Recipe Room</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="subscription.html">Subscribe</a></li>
+      </ul>
+      <div id="user-menu"></div>
+      <div id="search-container">
+        <label for="recipe-search" class="visually-hidden">Search for a recipe</label>
+        <input type="text" id="recipe-search" placeholder="Search a recipe" autocomplete="on" aria-label="Search a recipe" />
+        <button id="search-btn" aria-label="Search recipes">Search</button>
+        <!-- Conteneur pour le spinner et les suggestions -->
+        <div id="search-feedback" style="position: relative;" aria-live="polite">
+          <div id="spinner" style="display: none;" role="status" aria-hidden="true">Loading...</div>
+          <div id="suggestions" role="listbox"></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <p>If you have any questions, suggestions or would like to share your recipes, please feel free to drop us a message. We value every inquiry and look forward to hearing from you!</p>
+      
+      <form id="contact-form" action="/api/contact" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" placeholder="Type your message here" required></textarea>
+
+        <button type="submit" aria-label="Send Message">Send Message</button>
+      </form>
+      
+      <div id="form-response" role="alert"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 The Recipe Room. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="js/contact.js"></script>
+  <script type="module" src="js/header.js"></script>
+  <script type="module" src="js/search.js"></script>
+</body>
+</html>

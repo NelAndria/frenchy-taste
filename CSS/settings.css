@@ -147,3 +147,80 @@ button[type="submit"]:hover {
   color: #d32f2f;
   font-weight: bold;
 }
+
+/* Styles généraux du menu utilisateur */
+#user-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#user-dropdown a,
+#user-dropdown button {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+#user-dropdown a:hover,
+#user-dropdown button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Styles spécifiques pour le sous-menu Settings */
+.settings-wrapper {
+  position: relative;
+}
+
+.submenu,
+.nested-submenu {
+  display: none;
+  position: absolute;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 0;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+}
+
+.submenu a {
+  padding: 10px 15px;
+  font-size: 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Pour les écrans plus petits, vous pouvez ajuster les positions si nécessaire */
+@media (max-width: 768px) {
+  #user-dropdown {
+    right: 0;
+    left: auto;
+  }
+  .submenu {
+    left: 0;
+    top: 100%;
+  }
+}
+

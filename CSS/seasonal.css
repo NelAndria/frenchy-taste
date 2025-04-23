@@ -1,0 +1,58 @@
+.seasonal-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.seasons, .months, .produce {
+  margin-bottom: 30px;
+}
+
+.seasons h2, .months h2, .produce h2 {
+  font-size: 1.75rem;
+  color: #a33d2d;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#seasons-list, #months-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.season-btn, .month-btn {
+  background-color: #c0392b;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.season-btn:hover, .month-btn:hover {
+  background-color: #a93226;
+}
+
+.produce-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.produce-list li {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.produce-list img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}

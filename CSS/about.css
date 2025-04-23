@@ -1,0 +1,75 @@
+/* Container général */
+.about {
+    max-width: 800px;       /* Limite la largeur du contenu */
+    margin: 0 auto;         /* Centre horizontalement le contenu */
+    padding: 20px;          /* Ajoute de l'espace autour du contenu */
+    background-color: #fff; /* Fond blanc pour une bonne lisibilité */
+    border-radius: 8px;     /* Bords arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre pour la profondeur */
+  }
+  
+  /* Titres de la page About */
+  .about h2 {
+    font-size: 36px;
+    color: #a33d2d;          /* Vous pouvez utiliser une couleur qui correspond à l'en-tête */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .about h3 {
+    font-size: 24px;
+    color: #c0392b;         /* Couleur harmonieuse avec votre charte */
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  /* Paragraphes */
+  .about p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;  /* Justifier le texte pour une meilleure lisibilité */
+    color: #333;
+  }
+  
+  /* Listes */
+  .about ul {
+    list-style: disc inside;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .about li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Liens */
+  .about a {
+    color: #a33d2d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .about a:hover {
+    color: #c0392b;
+    text-decoration: underline;
+  }
+  
+  /* Section "Get In Touch" */
+  .about a.contact-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #a33d2d;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .about a.contact-link:hover {
+    background-color: #c0392b;
+  }
+  
